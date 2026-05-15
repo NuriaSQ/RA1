@@ -9,6 +9,8 @@ public class Part3_Pipe {
         System.out.println("Sistema operatiu detectat: " + SO.nomSO());
 
         ProcessBuilder pb1 = new ProcessBuilder(SO.llistarFitxers());
+        
+        //Direcció de l'usuari perquè tinc tots els fitxers dins de src.
         pb1.directory(new java.io.File(System.getProperty("user.dir")));
 
         ProcessBuilder pb2 = new ProcessBuilder(SO.filtrar(".java"));
